@@ -11,7 +11,7 @@
                     class="border rounded-lg mb-3 ion-padding-horizontal"></ion-input>
             </div>
             <div class="relative">
-                <ion-input label="Password" fill="outline" type="password" label-placement="stacked"
+                <ion-input label="Password"  type="password" label-placement="stacked"
                     placeholder="Enter your password" class="border rounded-lg ion-padding-horizontal"></ion-input>
                 <span class="absolute right-3 top-1/3 text-red-500">Forgot?</span>
             </div>

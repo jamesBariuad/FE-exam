@@ -1,60 +1,41 @@
 <template>
-  <ion-page>
-    <ion-header :translucent="true">
+  <ion-menu content-id="main-content" class="ion-padding-horizontal">
+    <div class="px-3 py-5">
+      <div class="flex ">
+        <ion-avatar class="mr-10">
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        <img src="../assets/crown.png" alt="crown" class="w-12">
+        <div class="self-end">
+
+          <ion-icon :icon="chevronForwardOutline" size="large" class="text-red-500 text-4xl"></ion-icon>
+        </div>
+      </div>
+      <div class="text-2xl font-semibold">Chou Tzuyu</div>
+      <div class="text-slate-500 ">+63 912 345 6789</div>
+
+    </div>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+  </ion-menu>
+
+  <ion-page id="main-content">
+    <ion-header>
       <ion-toolbar>
-        <ion-title>Blank</ion-title>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu</ion-title>
+
+
       </ion-toolbar>
     </ion-header>
+    <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu.
 
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-      </div>
-
-      <ion-button router-link="/start" router-direction="forward">
-        to start page
-      </ion-button>
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
+import { IonButtons, IonAvatar, IonIcon, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { logoIonic, chevronForwardOutline } from 'ionicons/icons';
 </script>
-
-<style scoped>
-#container {
-  text-align: center;
-  
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  
-  color: #8c8c8c;
-  
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-</style>
