@@ -3,6 +3,7 @@ import { RouteRecordRaw } from 'vue-router';
 import LoyaltyPointsPage from '../views/LoyaltyPointsPage.vue'
 import StartScreen from '../views/StartPage.vue'
 import LoginPage from '../views/LoginPage.vue'
+import HomePage from '../views/HomePage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -11,17 +12,23 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/loyaltyPoints',
-    name: 'Home',
+    name: 'LoyaltyPoints',
     component: LoyaltyPointsPage
   },
   {
     path: '/start',
     name: 'Start',
     component: StartScreen
-  },{
-    path:'/login',
+  },
+  {
+    path: '/login',
     name: 'Login',
     component: LoginPage
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: HomePage
   }
 ]
 
