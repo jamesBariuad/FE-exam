@@ -1,96 +1,179 @@
 <template>
-    <Menu></Menu>
+  <Menu></Menu>
 
-    <ion-page id="main-content">
-        <ion-header class="ion-no-border ion-padding">
-
-
-            <div class="flex items-center justify-between">
-
-                <ion-buttons slot="start">
-                    <ion-menu-toggle>
-                        <ion-icon class="text-4xl text-red-500" :icon="reorderTwoOutline"></ion-icon>
-                    </ion-menu-toggle>
-                </ion-buttons>
-
-                <div class="flex items-center">
-                    <img src="../assets/crown.png" alt="crown" class="w-8 mr-3">
-                    <div class="font-semibold">0 points</div>
-                    <ion-icon :icon="chevronForwardOutline" size="small" class="text-red-500 text-4xl"></ion-icon>
-                </div>
+  <ion-page id="main-content">
+    <ion-header class="ion-no-border ion-padding">
 
 
-                <ion-avatar class="w-8 h-8">
-                    <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-                </ion-avatar>
+      <div class="flex items-center justify-between">
+
+        <ion-buttons slot="start">
+          <ion-menu-toggle>
+            <ion-icon class="text-4xl text-red-500" :icon="reorderTwoOutline"></ion-icon>
+          </ion-menu-toggle>
+        </ion-buttons>
+
+        <div class="flex items-center">
+          <img src="../assets/crown.png" alt="crown" class="w-8 mr-3">
+          <div class="font-semibold">0 points</div>
+          <ion-icon :icon="chevronForwardOutline" size="small" class="text-red-500 text-4xl"></ion-icon>
+        </div>
+
+
+        <ion-avatar class="w-8 h-8">
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+      </div>
+    </ion-header>
+
+    <ion-content>
+      <ion-item lines="none" class="my-3">
+        <div>
+          <img alt="logo" src="../assets/fastfood-logo.PNG" />
+        </div>
+        <div>
+          <div class="text-sm text-slate-500">Annyeong Chou!</div>
+          <div class="text-2xl font-semibold"> What do you want to eat?</div>
+        </div>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-searchbar placeholder="try our new Steak Fries Veggies"></ion-searchbar>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-text slot="start">
+          <p class="text-2xl font-semibold">Special Offers!</p>
+        </ion-text>
+        <ion-item lines="none" slot="end">
+          <ion-text color="danger">
+            <p class="text-xs font-semibold">See All</p>
+          </ion-text>
+          <ion-icon :icon="chevronForwardOutline" size="small" class="text-red-500 text-4xl"></ion-icon>
+        </ion-item>
+      </ion-item>
+
+      <ion-item lines="none">
+        <swiper :slides-per-view="1.2" :loop="true" :space-between="20">
+          <swiper-slide>
+            <img class=" w-full rounded-xl" src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              alt="image-placeholder">
+          </swiper-slide>
+          <swiper-slide>
+            <img class=" w-full rounded-xl" src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              alt="image-placeholder">
+          </swiper-slide>
+          <swiper-slide>
+            <img class=" w-full rounded-xl" src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              alt="image-placeholder">
+          </swiper-slide>
+        </swiper>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-text slot="start">
+          <p class="text-2xl font-semibold mt-3">Category</p>
+        </ion-text>
+      </ion-item>
+
+      <ion-item lines="none">
+        <swiper :slides-per-view="1.8" :space-between="20" class="h-full">
+          <swiper-slide>
+            <div class="relative ">
+              <img class="mr-3 rounded-xl object-cover mr-5" src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+                alt="image-placeholder">
+              <div class="absolute left-0 bottom-0 text-white p-3">
+                <div class="font-bold text-lg">Chicken</div>
+                <div>9 recipes</div>
+              </div>
             </div>
-        </ion-header>
-
-        <ion-content>
-            <ion-item lines="none">
-                <div>
-                    <img alt="logo" src="../assets/fastfood-logo.PNG" />
-                </div>
-                <div>
-                    <div class="text-sm text-slate-500">Annyeong Chou!</div>
-                    <div class="text-2xl font-semibold"> What do you want to eat?</div>
-                </div>
-            </ion-item>
-
-            <ion-item lines="none">
-                <ion-searchbar></ion-searchbar>
-            </ion-item>
-
-            <ion-item lines="none">
-                <img class="w-1/2 mx-auto my-2" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="crown">
-
-            </ion-item>
-
-            <ion-item lines="none">
-                <ion-text slot="start">
-                    <h2 class="text-lg font-semibold">Rewards</h2>
-                </ion-text>
-                <ion-item lines="none" slot="end">
-                    <ion-text color="danger">
-                        <p class="text-xs font-semibold">How It Works</p>
-                    </ion-text>
-                    <ion-icon :icon="chevronForwardOutline" size="small" class="text-red-500 text-4xl"></ion-icon>
-                </ion-item>
-            </ion-item>
-
-            <ion-item lines="none">
-                <ion-chip class="bg-red-500 text-white" color="danger">All</ion-chip>
-                <ion-chip class="font-semibold text-slate-500">Beginner</ion-chip>
-                <ion-chip class="font-semibold text-slate-500">Intermediate</ion-chip>
-                <ion-chip class="font-semibold text-slate-500">Loyal</ion-chip>
-            </ion-item>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative ">
+              <img class="mr-3 rounded-xl object-cover mr-5" src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+                alt="image-placeholder">
+              <div class="absolute left-0 bottom-0 text-white p-3">
+                <div class="font-bold text-lg">Seafoods</div>
+                <div>6 recipes</div>
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper>
+      </ion-item>
 
 
-            <ion-card color="light">
-                <ion-item>
-                    <ion-thumbnail slot="start">
-                        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-                    </ion-thumbnail>
-                    <ion-label>
-                        <ion-card-header class="p-1">
-                            <ion-card-title class="font-semibold text-lg">Steak Fries Veggies
-                            </ion-card-title>
-                            <ion-card-subtitle class="mt-0">Meat</ion-card-subtitle>
+      <ion-item lines="none" class="mt-3">
+        <ion-text slot="start">
+          <p class="text-2xl font-semibold">What's New?</p>
+        </ion-text>
+      </ion-item>
+      <ion-item lines="none">
+        <img class="h-32 w-full rounded-xl object-cover" src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+          alt="image-placeholder">
+      </ion-item>
 
-                            <div class="flex items-center gap-2 mt-3">
-                                <img class="w-6" src="../assets/crown.png" alt="crown">
-                                <div class="text-red-500 font-semibold ">20 points</div>
-                            </div>
-                        </ion-card-header>
-                    </ion-label>
-                </ion-item>
-            </ion-card>
-        </ion-content>
-    </ion-page>
+      <ion-item lines="none" class="mt-3">
+        <ion-text slot="start">
+          <p class="text-2xl font-semibold">Most Popular</p>
+        </ion-text>
+      </ion-item>
+
+      <div class=" grid grid-cols-2">
+        <div   v-for="(item) in mostPopularItems">
+          <ion-card>
+
+            <img :src="item.image" alt={{item.name}}>
+            <div>
+              <div>{{ item.name }}</div>
+              <div>{{ item.category }}</div>
+            </div>
+            <div class="flex justify-between">
+              <div>{{ item.price }}</div>
+              <div>
+                {{ item.rating }}
+              </div>
+            </div>
+          </ion-card>
+        </div>
+      </div>
+
+
+
+
+
+    </ion-content>
+  </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonButtons, IonAvatar, IonCard, IonCardHeader, IonSearchbar, IonCardSubtitle, IonCardTitle, IonText, IonMenuToggle, IonChip, IonThumbnail, IonLabel, IonNote, IonItem, IonIcon, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
-import { reorderTwoOutline, chevronForwardOutline,searchCircle } from 'ionicons/icons';
+import { IonButtons, IonAvatar, IonGrid, IonCol, IonCard, IonCardHeader, IonSearchbar, IonCardSubtitle, IonCardTitle, IonText, IonMenuToggle, IonChip, IonThumbnail, IonLabel, IonNote, IonItem, IonIcon, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { reorderTwoOutline, chevronForwardOutline, searchCircle } from 'ionicons/icons';
 import Menu from './Menu.vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import '@ionic/vue/css/ionic-swiper.css';
+import StarRating  from 'vue-star-rating';
+
+
+
+const mostPopularItems = [
+  {
+    name: "Steak Fries Veggies",
+    category: "Meat",
+    price: 175,
+    rating: 4.1,
+    image: "https://ionicframework.com/docs/img/demos/thumbnail.svg"
+  }, {
+    name: "Chicken Salad",
+    category: "Chicken",
+    price: 172,
+    rating: 4.1,
+    image: "https://ionicframework.com/docs/img/demos/thumbnail.svg"
+  }
+]
+
+
+
+
 </script>
+
