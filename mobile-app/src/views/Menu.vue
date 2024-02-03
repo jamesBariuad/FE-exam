@@ -7,7 +7,7 @@
         </ion-avatar>
         <img src="../assets/crown.png" alt="crown" class="w-8 mr-10">
         <div class="font-semibold">0 points</div>
-        <ion-icon :icon="chevronForwardOutline" size="large" class="text-red-500 text-4xl"></ion-icon>
+        <ion-icon :icon="chevronForward" size="large" class="text-red-500 text-4xl"></ion-icon>
       </div>
       <div class="text-2xl font-semibold">Chou Tzuyu</div>
       <ion-note>+63 912 345 6789</ion-note>
@@ -90,5 +90,5 @@
 
 <script setup lang="ts">
 import { IonButtons, IonList, IonCard, IonCardHeader, IonCardContent, IonCardSubtitle, IonCardTitle, IonText, IonMenuToggle, IonChip, IonButton, IonThumbnail, IonGrid, IonLabel, IonNote, IonBadge, IonItem, IonRow, IonCol, IonAvatar, IonIcon, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
-import { reorderTwoOutline, chevronForwardOutline } from 'ionicons/icons';
+import { reorderTwoOutline, chevronForward } from 'ionicons/icons';
 </script>

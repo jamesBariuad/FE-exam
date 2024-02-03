@@ -2,14 +2,15 @@
   <Menu></Menu>
   <ion-page id="main-content">
     <ion-header class="ion-no-border ion-padding bg-white">
-      <ion-toolbar>
-        <ion-buttons slot="start">
+      
+        <div>
+          <ion-buttons slot="start">
           <ion-menu-toggle>
-            <ion-icon class="text-4xl text-red-500" :icon="reorderTwoOutline"></ion-icon>
+            <ion-icon class="text-4xl text-red-500" :icon="reorderTwo"></ion-icon>
           </ion-menu-toggle>
         </ion-buttons>
         <ion-title class="font-semibold text-2xl">Loyalty Points</ion-title>
-      </ion-toolbar>
+        </div>
     </ion-header>
     <ion-content>
       <ion-item lines="none">
@@ -83,6 +84,6 @@
 
 <script setup lang="ts">
 import { IonButtons, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonText, IonMenuToggle, IonChip, IonThumbnail, IonLabel, IonNote, IonItem, IonIcon, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
-import { reorderTwoOutline, chevronForwardOutline } from 'ionicons/icons';
+import { reorderTwo, chevronForwardOutline } from 'ionicons/icons';
 import Menu from './Menu.vue';
 </script>

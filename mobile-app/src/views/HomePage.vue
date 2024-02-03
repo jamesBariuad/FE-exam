@@ -3,13 +3,10 @@
 
     <ion-page id="main-content">
         <ion-header class="ion-no-border ion-padding">
-
-
             <div class="flex items-center justify-between">
-
                 <ion-buttons slot="start">
                     <ion-menu-toggle>
-                        <ion-icon class="text-4xl text-red-500" :icon="reorderTwoOutline"></ion-icon>
+                        <ion-icon class="text-4xl text-red-500" :icon="reorderTwo"></ion-icon>
                     </ion-menu-toggle>
                 </ion-buttons>
 
@@ -149,14 +146,12 @@
 
 <script setup lang="ts">
 import { IonButtons, IonAvatar, IonButton, IonFab, IonFabButton, IonCol, IonCard, IonCardHeader, IonSearchbar, IonCardSubtitle, IonCardTitle, IonText, IonMenuToggle, IonChip, IonThumbnail, IonLabel, IonNote, IonItem, IonIcon, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
-import { reorderTwoOutline, chevronForwardOutline, searchCircle } from 'ionicons/icons';
+import { reorderTwo, chevronForwardOutline, searchCircle } from 'ionicons/icons';
 import Menu from './Menu.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import '@ionic/vue/css/ionic-swiper.css';
 import StarRating from 'vue-star-rating';
-
-
 
 const mostPopularItems = [
     {

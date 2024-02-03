@@ -4,11 +4,12 @@ import LoyaltyPointsPage from '../views/LoyaltyPointsPage.vue'
 import StartScreen from '../views/StartPage.vue'
 import LoginPage from '../views/LoginPage.vue'
 import HomePage from '../views/HomePage.vue'
+import OurFoodsPage from '../views/OurFoodsPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/loyaltyPoints'
+    redirect: '/ourFoods'
   },
   {
     path: '/loyaltyPoints',
@@ -29,6 +30,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/home',
     name: 'Home',
     component: HomePage
+  },
+  {
+    path: '/ourFoods',
+    name: 'OurFoods',
+    component: OurFoodsPage
   }
 ]
 
