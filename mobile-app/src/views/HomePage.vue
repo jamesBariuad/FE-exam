@@ -116,25 +116,29 @@
                 </ion-text>
             </ion-item>
 
-            <div class=" grid grid-cols-2">
-                    <ion-card v-for="(item) in mostPopularItems">
+            <div class=" grid grid-cols-2 mb-16">
+                <ion-card v-for="(item) in mostPopularItems">
 
-                        <img :src="item.image" alt={{item.name}}>
-                        <div class="p-3">
+                    <img :src="item.image" alt={{item.name}}>
+                    <div class="p-3">
+                        <div>
+                            <div class="font-semibold text-black line-clamp-1">{{ item.name }}</div>
+                            <div>{{ item.category }}</div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="text-red-500 font-semibold text-lg">P {{ item.price }}</div>
                             <div>
-                                <div class="font-semibold line-clamp-1">{{ item.name }}</div>
-                                <div>{{ item.category }}</div>
-                            </div>
-                            <div class="flex justify-between">
-                                <div class="text-red-500 font-semibold text-lg">P {{ item.price }}</div>
-                                <div>
-                                    <star-rating :star-size="10" :rating="item.rating" :read-only="true"
-                                        :increment="0.1" :show-rating="false"></star-rating>
-                                </div>
+                                <star-rating :star-size="10" :rating="item.rating" :read-only="true" :increment="0.1"
+                                    :show-rating="false"></star-rating>
                             </div>
                         </div>
-                    </ion-card>
+                    </div>
+                </ion-card>
             </div>
+
+            <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+                <button class="bg-red-500 text-white rounded-xl px-12 py-4 shadow-md text-sm active:bg-red-800">Order Now!</button>
+            </ion-fab>
 
 
 
@@ -144,7 +148,7 @@
 </template>
 
 <script setup lang="ts">
-import { IonButtons, IonAvatar, IonGrid, IonCol, IonCard, IonCardHeader, IonSearchbar, IonCardSubtitle, IonCardTitle, IonText, IonMenuToggle, IonChip, IonThumbnail, IonLabel, IonNote, IonItem, IonIcon, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonButtons, IonAvatar, IonButton, IonFab, IonFabButton, IonCol, IonCard, IonCardHeader, IonSearchbar, IonCardSubtitle, IonCardTitle, IonText, IonMenuToggle, IonChip, IonThumbnail, IonLabel, IonNote, IonItem, IonIcon, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 import { reorderTwoOutline, chevronForwardOutline, searchCircle } from 'ionicons/icons';
 import Menu from './Menu.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -166,6 +170,19 @@ const mostPopularItems = [
         category: "Chicken",
         price: 172,
         rating: 5,
+        image: "https://ionicframework.com/docs/img/demos/thumbnail.svg"
+    }, {
+        name: "Sorvetes Primavera",
+        category: "Dessert",
+        price: 185,
+        rating: 4.5,
+        image: "https://ionicframework.com/docs/img/demos/thumbnail.svg"
+    },
+    {
+        name: "Fried Chicken",
+        category: "Chicken",
+        price: 175,
+        rating: 4.4,
         image: "https://ionicframework.com/docs/img/demos/thumbnail.svg"
     }
 ]
